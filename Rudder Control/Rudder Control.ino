@@ -11,7 +11,7 @@ void setup() {
 
 void loop() {
   analogVal = analogRead(potentiometerPin); // To read the values from the potentiometer
-  analogVal = map(analogVal, 0, 1023, 0, 180);  // Mapping the direction of the analog values (from 0 - 1023 to 0 - 180)
+  analogVal = map(analogVal, 0, 1023, 0, 360);  // Mapping the direction of the analog values (from 0 - 1023 to 0 - 180)
   servo.write(analogVal); // Sends the mapped value to servo
   delay(15); //Delays loop by 15ms
 }
